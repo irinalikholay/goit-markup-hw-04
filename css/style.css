@@ -450,7 +450,7 @@ img {
 }
 
 .customers-title{
-    font-style: 36px;
+    font-size: 36px;
     line-height: 1.11;
     color:var(--dark-color);
     margin-bottom: 72px;
@@ -478,17 +478,23 @@ img {
     align-items: center;
     justify-content: center;
     color: var(--suble-text-color);
-    border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
 .customers-link:hover{
-    color: #404bbf;
     border-color: #404bbf;
+    color: #404bbf;
 }
 
 .customers-link:focus{
+    border-color: #404bbf;
     color: #404bbf;
+    
+ }
+
+ .customers-icon{
+    fill: currentColor;
  }
 /** фууутер **/
 
@@ -496,6 +502,16 @@ img {
     background-color: #2e2f42;
     padding-top: 100px;
     padding-bottom: 100px;
+
+}
+
+.footer-container {
+    display: flex;
+    align-items: baseline;
+}
+
+.logotype-footer {
+    margin-right: 120px;
 
 }
 
@@ -529,6 +545,50 @@ img {
     max-width: 264px;
      }
 
+.footer-icon-text{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--white-color);
+    margin-bottom: 16px;
+
+}     
+
+.icon-menu{
+    display: flex;
+    gap: 16px;
+}
+
+.footer-icon-item{
+    width: 40px;
+    height: 40px;
+}
+
+.footer-icon-link{
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-brand-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-icon-link:hover{
+    background-color: var(--success-color);
+
+}
+
+.footer-icon-link:focus{
+    background-color: var(--success-color);
+}
+
+.footer-icons{
+    fill: var(--light-color);
+
+}
 
      /** ПОРТФОЛИО **/
 
@@ -601,12 +661,16 @@ img {
         padding-right: 24px;
         border: 1px solid #e7e9fc;
         border-radius: 4px;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
+
+    
 
     .text-button:hover {
         color: var(--white-color);
         background-color: var(--passed-state-color);
         border: 1px solid transparent;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
  
     }
 
@@ -614,11 +678,23 @@ img {
         color: var(--white-color);
         background-color: var(--passed-state-color);
         border: 1px solid transparent;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
         
     }
 
+    
+
     .images.link{
         text-decoration: none;
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .images.link:hover {
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    }
+
+    .images.link:focus{
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     }
 
     .photo-menu.list{
